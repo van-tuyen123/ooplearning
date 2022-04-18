@@ -1,5 +1,3 @@
-import org.omg.CORBA.PRIVATE_MEMBER;
-
 public class ArrayStack implements Stack{
     public static final int CAPACITY -1000;
     private int capacity;
