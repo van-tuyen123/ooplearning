@@ -1,8 +1,13 @@
 public class ArrayStack implements Stack{
-    public static final int CAPACITY -1000;
+
+    public static final int CAPACITY = 1000;
+    
     private int capacity;
+
     private Object a[];
+    
     private int top=-1;
+    
     public ArrayStack(){
         this(CAPACITY);
     }
@@ -10,8 +15,10 @@ public class ArrayStack implements Stack{
         capacity=cap;
         a=new Object[capacity];
     }
-    public int size();
-    return (top+1);
+    public int size(){
+        return (top + 1);
+    }
+
     public boolean isEmpty(){
         return (top<0);
     }
@@ -20,9 +27,16 @@ public class ArrayStack implements Stack{
         throw new StackFullException("Stack overflow");
         a[++top]=obj;
     }
-    public Object top() throws StackEmptyExcaption{
+
+    public Object top() throws StackEmptyException{
         if(isEmpty())
-        throws new StackEmptyException("Stack is empty");
+            throw new StackEmptyException("Stack is empty");
+        return a[top];
+    }
+    public Object pop() throws StackEmptyException{
+        Object elem;
+        if(isEmpty())
+            throw new StackEmptyException("Stack is empty");
         elem =a[top];
         a[top--]=null;
         return elem;
