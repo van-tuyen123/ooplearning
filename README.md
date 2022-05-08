@@ -13,3 +13,6 @@ Bài 3:(Main.java, Point.java, Point3d.java)
 Bài 1: Clock.java
 
 Bài 2: (Account.java, Bankingtest.java)
+
+## Practice week4
+Bài 1: Bai1.java
